@@ -16,7 +16,6 @@ pipeline {
         stage('Build Dependencies') {
             steps {
                 echo 'Building Dependencies'
-                sh 'php --version'
                 sh 'mysql --version'
                 sh 'apache2 -version'
                 sh 'composer --version'
