@@ -21,6 +21,7 @@ pipeline {
                 sh 'apache2 -version'
                 sh 'composer --version'
                 sh 'java -version'
+                sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && composer install'
             }
         }
         stage('Test') {
