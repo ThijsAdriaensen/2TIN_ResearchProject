@@ -18,9 +18,9 @@ pipeline {
                 echo 'Building Dependencies'
                 sh 'php --version'
                 sh 'mysql --version'
-                sh 'apache2 --version'
+                sh 'apache2 -version'
                 sh 'composer --version'
-                sh 'java --version'
+                sh 'java -version'
             }
         }
         stage('Test') {
