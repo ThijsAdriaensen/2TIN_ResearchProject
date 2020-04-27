@@ -4,7 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Application'
-
+                checkout(
+                [$class: 'GitSCM', branches: [[name: '*/master']],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[url: 'https://github.com/ThijsAdriaensen/2TIN_ResearchProject']]]
+                )
 
             }
         }
@@ -20,7 +26,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                //
+                sh 'sudo cp -r <> /var/www/html'
             }
         }
     }
