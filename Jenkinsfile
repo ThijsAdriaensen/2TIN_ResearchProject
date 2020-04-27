@@ -16,10 +16,6 @@ pipeline {
         stage('Build Dependencies') {
             steps {
                 echo 'Building Dependencies'
-                sh 'mysql --version'
-                sh 'apache2 -version'
-                sh 'composer --version'
-                sh 'java -version'
                 sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && composer install'
             }
         }
