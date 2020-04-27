@@ -3,6 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo 'Building Application'
+
+
+            }
+        }
+        stage('Build Dependencies') {
+            steps {
                 //
             }
         }
