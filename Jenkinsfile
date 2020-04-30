@@ -24,6 +24,12 @@ pipeline {
                 sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && /usr/local/bin/composer install'
             }
         }
+        stage('Importing Data') {
+            steps {
+                echo 'Importing Data'
+                sh 'mysql -u username -p database_name < file.sql'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Running Tests'
