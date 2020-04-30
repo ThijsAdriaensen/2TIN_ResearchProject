@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'sudo cp -r ./SNB5_Pipeline /var/www/html/'
+                sh 'sudo cp -r /var/lib/jenkins/workspace/SNB5_Pipeline /var/www/html/'
             }
         }
     }
