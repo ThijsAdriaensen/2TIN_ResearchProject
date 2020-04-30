@@ -21,8 +21,7 @@ pipeline {
                 sh 'apache2 -version'
                 sh 'composer --version'
                 sh 'java -version'
-                sh 'mv composer.phar /usr/local/bin/composer'
-                sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && composer install'
+                sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && /usr/local/bin/composer install'
             }
         }
         stage('Test') {
