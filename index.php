@@ -16,8 +16,8 @@
 
         // Define mysql server settings
         $serverName = "localhost";
-        $username = "root";
-        $password = "ventieldopje24";
+        $username = "jenkins";
+        $password = "pxl";
         $dbName = "employees";
 
         // Create a new mysqli connection. Remember to enable this in php.ini !!

@@ -27,7 +27,7 @@ pipeline {
         stage('Importing Data') {
             steps {
                 echo 'Importing Data'
-                sh 'mysql -u username -p database_name < file.sql'
+                sh 'mysql -u jenkins -p pxl < file.sql'
             }
         }
         stage('Test') {
