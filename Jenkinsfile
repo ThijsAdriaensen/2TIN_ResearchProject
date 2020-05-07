@@ -28,6 +28,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running Tests'
+                sh 'phpunit --log-junit result/phpunit/phpunit.xml -c tests/EmployeeTest.php'
             }
         }
         stage('Deploy') {
