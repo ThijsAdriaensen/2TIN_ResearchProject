@@ -22,7 +22,7 @@ pipeline {
                 sh 'composer --version'
                 sh 'java -version'
                 sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && /usr/local/bin/composer install'
-                sh 'phpunit --bootstrap vendor/autoload.php tests'
+                sh 'composer dump-autoload'
             }
         }
         
