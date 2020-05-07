@@ -31,15 +31,16 @@ pipeline {
                 sh 'phpunit --log-junit result/phpunit/phpunit.xml -c tests/phpunit.xml'
             }
         }
-        post {
-        always {
-            junit 'result/phpunit/phpunit.xml'
-        }
-    }
+        
         stage('Deploy') {
             steps {
                 sh 'sudo cp -r /var/lib/jenkins/workspace/SNB5_Pipeline/ /var/www/html/'
             }
+        }
+    }
+    post {
+        always {
+            junit 'result/phpunit/phpunit.xml'
         }
     }
 }
