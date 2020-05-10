@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
-require_once './Employee.php';
+require_once './src/Employee.php';
 
 final class EmployeeTest extends TestCase
 {
