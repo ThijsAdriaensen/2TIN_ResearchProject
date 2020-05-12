@@ -16,11 +16,11 @@ pipeline {
         stage('Build Dependencies') {
             steps {
                 echo 'Building Dependencies'
-                sh 'php --version'
-                sh 'mysql --version'
-                sh 'apache2 -version'
-                sh 'composer --version'
-                sh 'java -version'
+                sh 'php --version && apt upgrade php'
+                sh 'mysql --version && apt upgrade php-mysql'
+                sh 'apache2 -version && apt upgrade apache2'
+                sh 'composer --version && apt upgrade composer'
+                sh 'java -version && apt upgrade java'
                 sh 'cd /var/lib/jenkins/workspace/SNB5_Pipeline && /usr/local/bin/composer install'
                 sh 'composer dump-autoload'
             }
